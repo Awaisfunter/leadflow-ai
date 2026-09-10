@@ -7,7 +7,7 @@
 
 **Solution:** LeadFlow AI - a hybrid architecture system combining deterministic business logic, bounded AI generation, and mandatory human approval to automate lead qualification while maintaining governance and audit trails.
 
-**Results:** 98% processing time reduction (16m45s → 2.3s), 100% benchmark accuracy across 12 test cases, 10/10 failure scenarios handled gracefully, complete audit trail with human approval gates.
+**Results:** Approximately 99.8% processing time reduction in measured benchmark (16m45s → 2.3s), 100% benchmark accuracy across 12 test cases, 10/10 failure scenarios handled gracefully, complete audit trail with human approval gates.
 
 **Scope:** 5-day assessment demonstrating evaluation methodology, system architecture, reliability testing, and operational handoff preparation.
 
@@ -142,7 +142,7 @@ CRM Payload Generation → SQLite Audit Logging
 - **Benchmark Validation:** 12/12 test cases with perfect tier, score, and routing accuracy
 
 ### Performance Metrics (Day 3 Measured)
-- **Processing Time:** 2.3 seconds average (vs 16m45s baseline) = 98% reduction
+- **Processing Time:** 2.3 seconds average (vs 16m45s baseline) = approximately 99.8% reduction in assessment benchmark
 - **DNS Latency:** 289-1001ms (network dependent)
 - **Website Latency:** 0-3419ms (bounded by timeout)
 - **Benchmark Accuracy:** 100% tier classification, 100% routing precision
@@ -222,7 +222,7 @@ We deliberately tested 10 failure scenarios to identify weaknesses:
 ## 8. Business Value Proxies
 
 ### Measured Operational Improvements
-- **Processing Time:** 98% reduction (16m45s → 2.3s average)
+- **Processing Time:** Approximately 99.8% reduction in measured assessment benchmark (16m45s → 2.3s average)
 - **Workflow Consolidation:** 7 browser tabs → 1 unified interface
 - **Context Switches:** 5 manual transitions → 0 (single interface)
 - **Error Reduction:** Structured Pydantic payloads eliminate manual data entry errors

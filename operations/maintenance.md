@@ -219,28 +219,24 @@ WEBSITE_MAX_REDIRECTS=3
 **How to Modify:**
 
 ```bash
-# Increase website timeout to 8 seconds
-WEBSITE_TIMEOUT_SECONDS=8.0
+# Example: Adjust DNS timeout only if operational requirements change
+DNS_TIMEOUT_SECONDS=5.0
 
-# Decrease DNS timeout to 3 seconds
-DNS_TIMEOUT_SECONDS=3.0
+# Example: Adjust website timeout only if operational requirements change
+WEBSITE_TIMEOUT_SECONDS=5.0
 ```
+
+**Important:** Changing timeouts affects system behavior significantly. After modifying:
+- Restart the application
+- Run the benchmark suite to verify system behavior
+- Test with several leads to confirm latencies are acceptable
+- Revert if performance degrades
 
 **Risks:**
 - Increasing timeout delays SDR workflow
 - Decreasing timeout may cause false failures
 - Changes apply immediately on application restart
 - Audit trail will show different latencies
-
-**Tests to Run:**
-```bash
-# Restart application
-python day2/backend/app/main.py
-
-# Monitor integration latencies
-# Submit 5 test leads and review audit trail
-# Verify latencies match new timeout settings
-```
 
 ---
 

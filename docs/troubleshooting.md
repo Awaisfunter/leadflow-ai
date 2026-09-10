@@ -223,21 +223,24 @@ python day2/backend/app/main.py
 
 ## Performance Issues
 
-### Symptom: Application is slow or processing takes >10 seconds per lead
+### Symptom: Total processing time is unexpectedly high
 
 **Cause:**
-- External integrations (DNS, website) taking time
+- External integrations (DNS, website) taking longer than expected
 - System resource constraints
-- Database queries slow
-- LLM latency
+- Network latency or timeouts
+- LLM latency (if configured)
 
 **Action:**
-1. Expected latency: 2-5 seconds typical
-2. Network latency can add 0-3 seconds for DNS/website
-3. Monitor system resources: CPU, memory, disk
-4. Check external service responsiveness
-5. Review audit trail for specific step taking time
-6. This is normal for evaluation environment
+1. Expected latency: 2-5 seconds typical for end-to-end pipeline
+2. Each external integration can add latency:
+   - DNS resolution: 0-5000ms (bounded by DNS_TIMEOUT_SECONDS)
+   - Website fetch: 0-5000ms (bounded by WEBSITE_TIMEOUT_SECONDS=5.0)
+3. Monitor the audit trail for specific step timings
+4. Check system resources: CPU, memory, disk
+5. Check network connectivity and responsiveness
+6. Review audit trail for TIMEOUT or INTEGRATION_FAILED events
+7. This is normal for assessment environment with external verifications
 
 ---
 

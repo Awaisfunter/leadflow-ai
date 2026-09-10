@@ -84,7 +84,7 @@ Executed 10 deliberate failure scenarios to validate system resilience:
 
 | Dimension | Manual Baseline | LeadFlow AI | Improvement |
 |---|---|---|---|
-| **Processing Time** | 16m 45s | 2.3 seconds | 98% reduction |
+| **Processing Time** | 16m 45s | 2.3 seconds | Approximately 99.8% reduction |
 | **Browser Tabs** | 7 tabs | 1 web interface | Unified workflow |
 | **Context Switches** | 5 manual transitions | 0 (single interface) | Cognitive load eliminated |
 | **Quality Score** | 8.0/10 | Day 1 baseline: 8.0/10 / Future target: 8.5/10+ [TARGET, not measured] | Maintained baseline quality |
@@ -95,7 +95,7 @@ Executed 10 deliberate failure scenarios to validate system resilience:
 ## Business Value Proxies
 
 **Direct Measurements [OBSERVED]**:
-- Processing time reduction: 98% improvement
+- Processing time reduction: Approximately 99.8% improvement in assessment benchmark
 - Test suite coverage: 56/56 automated tests
 - Benchmark accuracy: 12/12 cases passing
 - Security failure prevention: 10/10 adversarial cases controlled

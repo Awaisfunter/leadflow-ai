@@ -87,7 +87,7 @@ Every stage produces a validated Pydantic model with exact data provenance label
 - **Technology**: `httpx.AsyncClient` with bounded timeouts and max 3 redirects.
 - **Security Boundaries**:
   - Bounded to root URL; no crawling.
-  - Strict connect timeout (min 2.0s, max 8.0s).
+  - Strict timeout enforcement: 5.0-second timeout ceiling for SDR responsiveness.
   - Unsupported schemes (`ftp://`, `file://`, `javascript:`) rejected immediately without network calls.
   - Page body read capped at 32 KB solely to locate `<title>` tag.
   - Body content is **immediately deallocated** and treated as untrusted context.

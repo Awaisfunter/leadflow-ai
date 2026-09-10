@@ -482,7 +482,7 @@ flowchart TD
     subgraph DispatchLayer["5. CRM SYNC & AUDIT TRAIL"]
         M -->|Approved| N[CRM Webhook Dispatch: Salesforce/HubSpot Payload]
         M -->|Approved| O[Email SMTP Dispatch]
-        N & O --> P[(SQLite Immutable Audit Log)]
+        N & O --> P[(SQLite Append-Only Audit Log)]
     end
 ```
 
@@ -497,7 +497,7 @@ flowchart TD
 | **Claim Validator** | Deterministic Rule Guardrail | Regex and keyword check ensuring no unapproved commercial commitments exist in the draft. | Does NOT rewrite customer creative styling. |
 | **Human Review Gate** | React/Vite Non-Developer UI | Presents evidence, highlights risk badges, enables 1-click edit, approval, or rejection. | Does NOT require any command-line or code interactions. |
 | **CRM Dispatcher** | Deterministic API Webhook | Formats clean, schema-compliant JSON payloads for Salesforce/HubSpot synchronization. | Does NOT bypass human approval for quarantined accounts. |
-| **Audit Logger** | SQLite Database | Records immutable transaction logs: prompt, raw input, enriched data, edits, rep ID, timestamp. | Cannot be overwritten by user actions. |
+| **Audit Logger** | SQLite Database | Records append-only transaction logs: prompt, raw input, enriched data, edits, rep ID, timestamp. | Cannot be overwritten by user actions. |
 
 ---
 
