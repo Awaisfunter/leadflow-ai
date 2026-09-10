@@ -364,7 +364,7 @@ class CRMOutreach(BaseModel):
 class CRMMetadata(BaseModel):
     lead_id: str
     processed_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-    system_version: str = "leadflow-ai-v0-day3"
+    system_version: str = "leadflow-ai-final"
     data_source: str = "synthetic_internal_dataset"
     crm_status: str = "PREVIEW_ONLY"
     dispatch_authorized: bool = False

@@ -1,6 +1,19 @@
 {
   "companies": [
     {
+      "domain": "microsoft.com",
+      "company_name": "Microsoft Corporation",
+      "employee_count": 225000,
+      "employee_range": "1000+",
+      "industry": "Enterprise Software",
+      "funding_stage": "Public",
+      "headquarters": "Redmond, WA, USA",
+      "technology_signals": ["Azure", "Office 365", "Salesforce", "Teams"],
+      "verification_status": "VERIFIED",
+      "source": "synthetic_internal_dataset",
+      "notes": "Fortune 10 technology company - real domain matches public website for demo accuracy."
+    },
+    {
       "domain": "acmecorp.com",
       "company_name": "Acme Corporation",
       "employee_count": 850,
@@ -11,7 +24,7 @@
       "technology_signals": ["Salesforce", "Slack", "AWS", "Outreach"],
       "verification_status": "VERIFIED",
       "source": "synthetic_internal_dataset",
-      "notes": "Fortune 500 enterprise software company with active digital transformation program."
+      "notes": "Synthetic benchmark company. Public domain (acmecorp.com) is a placeholder and does not correspond to a real business website."
     },
     {
       "domain": "datapulse.io",

@@ -129,7 +129,7 @@ def build_crm_payload(
     meta = CRMMetadata(
         lead_id=identity.lead_id,
         processed_at=datetime.now(timezone.utc),
-        system_version="leadflow-ai-v0-day3",
+        system_version="leadflow-ai-final",
         data_source=(
             enrichment.source if enrichment else "synthetic_internal_dataset"
         ),

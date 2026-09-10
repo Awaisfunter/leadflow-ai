@@ -690,7 +690,7 @@ def test_day3_crm_metadata_version(tc01_lead):
     import asyncio
     resp = asyncio.run(run_pipeline(tc01_lead))
     assert resp.crm_payload is not None
-    assert resp.crm_payload.metadata.system_version == "leadflow-ai-v0-day3"
+    assert resp.crm_payload.metadata.system_version == "leadflow-ai-final"
 
 
 # Test 39: Automated Day 1 Benchmark Expectation-Matching Evaluator

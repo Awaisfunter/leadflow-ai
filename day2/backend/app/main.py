@@ -55,13 +55,26 @@ app.add_middleware(
 
 app.include_router(router)
 
+# Mount frontend as static files
+frontend_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "frontend")
+if os.path.exists(frontend_path):
+    app.mount("/static", StaticFiles(directory=frontend_path), name="frontend")
+
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
+async def serve_quickstart():
+    html_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "frontend", "quickstart.html")
+    if os.path.exists(html_path):
+        with open(html_path, "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    return HTMLResponse("<h1>LeadFlow AI — Quickstart page not found.</h1>")
+
+@app.get("/dashboard", response_class=HTMLResponse, include_in_schema=False)
 async def serve_dashboard():
     html_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "frontend", "index.html")
     if os.path.exists(html_path):
         with open(html_path, "r", encoding="utf-8") as f:
             return HTMLResponse(content=f.read())
-    return HTMLResponse("<h1>LeadFlow AI API is running. Dashboard not found.</h1>")
+    return HTMLResponse("<h1>LeadFlow AI — Dashboard not found.</h1>")
 
 
 if __name__ == "__main__":
