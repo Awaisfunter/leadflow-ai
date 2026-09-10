@@ -1,0 +1,10 @@
+category,pre_hardening_baseline,post_hardening_result,delta,status
+Total Automated Tests,41 passed,56 passed,+15 security & reliability regression tests,PASS
+Deliberate Break Cases (F-01 to F-10),10 evaluated,10/10 passed with bounded degradation,Zero unhandled crashes or unverified leaks,PASS
+12-Case Benchmark Suite Match Rate,12/12 (100.0%),12/12 (100.0%),Zero regressions in Tier Score or Route,PASS
+Website Fetch Timeout Ceiling,Indeterminate / 8.0s,Bounded 5.0s max,Predictable latency + actionable SDR guidance,PASS
+LLM Fallback Draft Generation,Fallback active without audit event,Fallback active + FALLBACK_ACTIVATED audit event,Full telemetry & audit provenance,PASS
+Commercial Claim Safety Coverage,Basic discount checks,HIPAA + 100% uptime SLA + unapproved discount blocks,Enterprise risk coverage hardened,PASS
+Quarantine Approval Guardrail,Implicit dashboard filter,Enforced security invariant in backend state machine,Direct approval strictly prohibited & audited,PASS
+Tampered Edit Re-validation,Manual spot-check,Automated re-validation on approval action,Zero unauthorized claim leakage,PASS
+Human Approval State Machine,Ambiguous pre-approval telemetry,Strict PENDING_REVIEW -> APPROVED with PREVIEW_ONLY lock,Verified security state machine contract,PASS

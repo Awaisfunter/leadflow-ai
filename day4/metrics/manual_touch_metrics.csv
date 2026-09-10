@@ -1,0 +1,7 @@
+workflow,manual_touch_count,description,source
+standard_tier1_happy_path,1,"SDR reviews qualified Tier 1 inbound lead and clicks 'Approve & Dispatch' to authorize CRM payload","SDR Dashboard UI / Day 4 Proxy Evaluation"
+standard_tier2_happy_path,1,"SDR reviews qualified Tier 2 inbound lead and clicks 'Approve & Dispatch' to authorize CRM payload","SDR Dashboard UI / Day 4 Proxy Evaluation"
+standard_tier3_self_serve,0,"Lead scored <=59 deterministically; routed to self-serve onboarding without requiring SDR intervention","Day 1/3/4 Benchmark Routing Engine"
+quarantined_adversarial_lead,0,"Lead automatically quarantined by security detector; draft suppressed, dispatch locked, zero SDR touch permitted without SecOps clearance","RiskDetector / HumanApprovalGate"
+draft_customization_path,2,"SDR clicks 'Edit Draft' (touch 1) to modify body text, then clicks 'Approve & Dispatch' (touch 2) after automatic re-validation","SDR Dashboard editDraftModal / handle_approval_action"
+lead_rejection_path,1,"SDR reviews low-fit or out-of-ICP lead and clicks 'Reject' to archive lead without dispatch authorization","SDR Dashboard UI / handle_approval_action"

@@ -1,0 +1,9 @@
+dimension,metric,pre_hardening,post_hardening,target,status,evidence_reference
+Regression Integrity,12-Case Benchmark Suite Pass Rate,12/12 (100%),12/12 (100%),100%,PASS,day4/regression/day4_regression_results.csv
+Automated Test Coverage,Automated Pytest Suite (Unit + Integration + Security),41/41 (100%),56/56 (100%),>= 45 tests,PASS,day4/evidence/post_hardening_test_execution.txt
+Failure Injection Handling,Pre-Hardening Failure Cases Evaluated: 6 | Post-Hardening Failure Cases Evaluated: 10,6/6 (100%),10/10 (100%),100%,PASS,day4/break_tests/failure_injection_cases.json
+Adversarial Robustness,"Tamper, Bypass, & Poisoning Containment Rate",4/4 (100%),4/4 (100%),100%,PASS,day4/break_tests/adversarial_cases.json
+Network Bounded Latency,Website Metadata Extraction Timeout Bound,10.0s upper bound,5.0s strict bounded timeout,<= 5.0s,PASS,day2/backend/app/services/website_metadata.py (timeout=5.0)
+Claim Governance,Regulatory / SLA Prohibited Pattern Coverage,"Base patterns (SOC2, 99.999%, Zero downtime)","Extended patterns (HIPAA, 100% SLA, zero-downtime guarantees)",Deterministic Blocking,PASS,day2/backend/app/services/claim_validator.py
+Audit Trail Completeness,Security & Failure Event Types in Append-Only Trail,Base operational events,"Explicit FAILURE_INJECTION, INTEGRATION_FAILED, FALLBACK_ACTIVATED",100% auditable transitions,PASS,day2/backend/app/services/audit_logger.py
+CRM Dispatch Safety,Guaranteed Block on Unapproved / Quarantined Leads,100% dispatch gated,100% dispatch gated + audit logging on bypass attempt,0 unapproved dispatches,PASS,backend/tests/test_pipeline.py::test_day4_quarantine_approval_bypass_records_audit_event

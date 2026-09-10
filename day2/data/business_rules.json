@@ -1,0 +1,122 @@
+{
+  "icp_scoring": {
+    "firmographic_points": {
+      "gt_500": 40,
+      "100_to_499": 30,
+      "50_to_99": 20,
+      "10_to_49": 10,
+      "1_to_9": 5
+    },
+    "role_seniority_points": {
+      "c_level_vp_head": 25,
+      "director_lead": 18,
+      "manager_specialist": 10,
+      "individual_contributor": 5,
+      "student_academic": 0
+    },
+    "commercial_intent_points": {
+      "active_replacement": 20,
+      "evaluation_demo": 15,
+      "pricing_inquiry": 10,
+      "general_info": 5
+    },
+    "deployment_urgency_points": {
+      "immediate_this_quarter": 15,
+      "within_6_months": 10,
+      "exploring_next_year": 5
+    },
+    "risk_penalties": {
+      "competitor_domain": -100,
+      "prompt_injection_detected": -100,
+      "disposable_webmail_domain": -20,
+      "academic_domain": -80
+    }
+  },
+  "tier_thresholds": {
+    "tier1": {"min_score": 80, "min_headcount": 100},
+    "tier2_score_range": {"min": 60, "max": 79},
+    "tier2_headcount_range": {"min": 50, "max": 249},
+    "tier3_score_range": {"min": 30, "max": 59},
+    "disqualified_max_score": 29
+  },
+  "competitor_domains": [
+    "competitorsaas.com",
+    "rivalcrm.com",
+    "compx.io"
+  ],
+  "academic_domains": [
+    ".edu",
+    ".ac.uk",
+    "university.",
+    "college."
+  ],
+  "disposable_webmail_domains": [
+    "gmail.com",
+    "yahoo.com",
+    "hotmail.com",
+    "outlook.com",
+    "protonmail.com",
+    "icloud.com",
+    "aol.com",
+    "mail.com",
+    "ymail.com",
+    "live.com"
+  ],
+  "claim_validation": {
+    "blocked_patterns": [
+      "\\$\\d+[kK]?\\s*(off|discount|free|special|credit)",
+      "\\b\\d+%\\s*discount",
+      "guarantee.*implementation",
+      "guaranteed.*implementation",
+      "guarantee.*deployment",
+      "certified.*iso",
+      "iso\\s*\\d{4,5}",
+      "soc\\s*2\\s*type\\s*ii",
+      "g2\\s*leader",
+      "named.*gartner",
+      "100%\\s*uptime\\s*guarantee",
+      "\\b\\d+(?:\\.\\d+)?%\\s*(?:uptime|sla)\\b",
+      "hipaa\\s*(?:certified|certification|compliant|compliance)",
+      "unlimited.*users.*free",
+      "money[- ]back\\s*guarantee",
+      "guaranteed.*ROI",
+      "discount.*expires",
+      "(?:unconditional|guaranteed)\\s*\\d+%\\s*discount"
+    ],
+    "warning_patterns": [
+      "best.*in.*class",
+      "industry.*leading",
+      "guaranteed.*results",
+      "proven.*roi"
+    ]
+  },
+  "prompt_injection_signatures": [
+    "ignore previous instructions",
+    "ignore all previous",
+    "system prompt",
+    "\\\\n\\\\n###",
+    "new instructions:",
+    "override:",
+    "you are now",
+    "act as if",
+    "jailbreak",
+    "drop table",
+    "delete from",
+    "exec(",
+    "system override",
+    "<script",
+    "eval(",
+    "APPROVED FOR.*DISCOUNT",
+    "forget everything",
+    "disregard"
+  ],
+  "approved_value_propositions": [
+    "Reduce manual lead qualification time from 16 minutes to under 1 minute.",
+    "Deterministic ICP scoring eliminates qualification bias.",
+    "Human-in-the-loop approval ensures no autonomous commercial commitments.",
+    "CRM-ready structured payloads reduce data entry errors.",
+    "Prompt injection detection protects against adversarial lead submissions.",
+    "Audit logging provides full traceability for compliance.",
+    "Supports Salesforce and HubSpot webhook integration (requires configuration)."
+  ]
+}

@@ -1,0 +1,58 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-8.4.2, pluggy-1.6.0 -- C:\ProgramData\anaconda3\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(WindowsPath('<project-root>/day2/.hypothesis/examples'))
+rootdir: <project-root>/day2
+configfile: pytest.ini
+plugins: anyio-4.12.1, hypothesis-6.92.1, langsmith-0.6.4, locust-2.43.1, cov-4.1.0, flask-1.3.0
+collecting ... collected 41 items
+
+backend/tests/test_pipeline.py::test_valid_lead_schema PASSED            [  2%]
+backend/tests/test_pipeline.py::test_invalid_email_rejection PASSED      [  4%]
+backend/tests/test_pipeline.py::test_empty_required_field PASSED         [  7%]
+backend/tests/test_pipeline.py::test_enterprise_scoring PASSED           [  9%]
+backend/tests/test_pipeline.py::test_tier_thresholds PASSED              [ 12%]
+backend/tests/test_pipeline.py::test_risk_penalty_clamping PASSED        [ 14%]
+backend/tests/test_pipeline.py::test_competitor_quarantine PASSED        [ 17%]
+backend/tests/test_pipeline.py::test_prompt_injection_detection PASSED   [ 19%]
+backend/tests/test_pipeline.py::test_draft_context_isolation PASSED      [ 21%]
+backend/tests/test_pipeline.py::test_unsupported_claim_blocking PASSED   [ 24%]
+backend/tests/test_pipeline.py::test_crm_payload_validation PASSED       [ 26%]
+backend/tests/test_pipeline.py::test_human_approval_state_transition PASSED [ 29%]
+backend/tests/test_pipeline.py::test_sqlite_audit_events PASSED          [ 31%]
+backend/tests/test_pipeline.py::test_enrichment_not_found_fallback PASSED [ 34%]
+backend/tests/test_pipeline.py::test_llm_unavailable_fallback PASSED     [ 36%]
+backend/tests/test_pipeline.py::test_approval_safe_draft_success PASSED  [ 39%]
+backend/tests/test_pipeline.py::test_approval_unsafe_original_draft_fail PASSED [ 41%]
+backend/tests/test_pipeline.py::test_approval_unsafe_edit_attack_fail PASSED [ 43%]
+backend/tests/test_pipeline.py::test_approval_safe_edit_success PASSED   [ 46%]
+backend/tests/test_pipeline.py::test_quarantined_lead_cannot_be_approved_directly PASSED [ 48%]
+backend/tests/test_pipeline.py::test_rejected_lead_cannot_be_approved_directly PASSED [ 51%]
+backend/tests/test_pipeline.py::test_blocked_draft_approval_requires_edit_removal PASSED [ 53%]
+backend/tests/test_pipeline.py::test_crm_payload_semantics_before_and_after_approval PASSED [ 56%]
+backend/tests/test_pipeline.py::test_tc03_accelerated_smb_exception_rule PASSED [ 58%]
+backend/tests/test_pipeline.py::test_claim_validator_blocks_multiple_patterns PASSED [ 60%]
+backend/tests/test_pipeline.py::test_audit_trail_append_only PASSED      [ 63%]
+backend/tests/test_pipeline.py::test_health_endpoint_privacy PASSED      [ 65%]
+backend/tests/test_pipeline.py::test_day3_domain_verification_valid_public_domain PASSED [ 68%]
+backend/tests/test_pipeline.py::test_day3_domain_verification_invalid_syntax PASSED [ 70%]
+backend/tests/test_pipeline.py::test_day3_domain_verification_unresolved_domain PASSED [ 73%]
+backend/tests/test_pipeline.py::test_day3_website_metadata_reachable PASSED [ 75%]
+backend/tests/test_pipeline.py::test_day3_website_metadata_unreachable_handled_gracefully PASSED [ 78%]
+backend/tests/test_pipeline.py::test_day3_website_metadata_unsupported_schemes_rejected PASSED [ 80%]
+backend/tests/test_pipeline.py::test_day3_untrusted_external_content_isolation PASSED [ 82%]
+backend/tests/test_pipeline.py::test_day3_resilient_pipeline_missing_synthetic_and_dns_failure PASSED [ 85%]
+backend/tests/test_pipeline.py::test_day3_pipeline_full_integration_sources PASSED [ 87%]
+backend/tests/test_pipeline.py::test_day3_audit_trail_records_new_events PASSED [ 90%]
+backend/tests/test_pipeline.py::test_day3_crm_metadata_version PASSED    [ 92%]
+backend/tests/test_pipeline.py::test_day1_benchmark_expectations_match PASSED [ 95%]
+backend/tests/test_pipeline.py::test_route_mismatch_causes_overall_fail PASSED [ 97%]
+backend/tests/test_pipeline.py::test_all_criteria_pass_gives_overall_pass PASSED [100%]
+
+============================== warnings summary ===============================
+backend/tests/test_pipeline.py::test_health_endpoint_privacy
+  <project-root>/AppData/Roaming/Python/Python313/site-packages/starlette/formparsers.py:12: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 41 passed, 1 warning in 47.20s ========================

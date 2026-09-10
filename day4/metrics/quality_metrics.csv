@@ -1,0 +1,11 @@
+metric,numerator,denominator,value,definition,source
+benchmark_pass_rate,12,12,1.0,"Proportion of Day 1 benchmark cases matching expected tier, score, and routing simultaneously","day4/regression/day4_regression_results.csv"
+route_accuracy,12,12,1.0,"Proportion of benchmark cases routed to exactly matching destination next_action","day4/regression/day4_regression_results.csv"
+tier_accuracy,12,12,1.0,"Proportion of benchmark cases categorized into matching ICP qualification tier","day4/regression/day4_regression_results.csv"
+claim_safety_rate,9,9,1.0,"Proportion of generated outreach drafts adhering to commercial commitment policies without unapproved claims","day4/regression/day4_regression_results.csv"
+quarantine_detection_rate,3,3,1.0,"Proportion of adversarial/competitor/academic risk leads correctly quarantined (TC-09, TC-10, TC-11)","day4/regression/day4_regression_results.csv"
+fallback_success_rate,10,10,1.0,"Proportion of leads successfully generating safe deterministic drafts upon LLM unavailability","day4/regression/day4_regression_results.csv"
+controlled_failure_rate,10,10,1.0,"Proportion of deliberate failure injection cases exhibiting bounded, controlled, audited degradation","day4/evidence/break_test_execution.txt"
+automated_test_pass_rate,56,56,1.0,"Proportion of automated pytest regression and security suite tests passing","pytest backend/tests/test_pipeline.py"
+approval_gate_security_rate,8,8,1.0,"Proportion of explicit approval gate regression security checks passing (TEST A - TEST H)","backend/tests/test_pipeline.py"
+pre_approval_leakage_rate,0,12,0.0,"Proportion of pre-approval leads with dispatch_authorized=True (target: 0.0)","day4/regression/day4_regression_results.csv"

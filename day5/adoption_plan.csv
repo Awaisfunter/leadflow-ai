@@ -1,0 +1,13 @@
+metric,definition,measurement_method,baseline,week1_target,week2_target,owner,review_frequency
+Lead Processing Time,Average time from lead submission to approval decision,Dashboard timing metrics,16m45s manual baseline,<5s average,<3s average,Operations Manager,Daily
+Manual Touch Count,Number of leads requiring manual intervention beyond approval,Audit log analysis of NEEDS_VERIFICATION flags,100% manual baseline,<20% manual touch,<15% manual touch,SDR Team Lead,Daily
+Qualification Accuracy,Percentage of processed leads correctly classified by tier,Human review of 20 random daily samples,8.0/10 manual baseline,>90% accuracy,>95% accuracy,RevOps Manager,Weekly
+Route Accuracy,Percentage of leads assigned to correct next action,Sales team feedback on routing appropriateness,8.0/10 manual baseline,>90% accuracy,>95% accuracy,Sales Operations,Weekly
+Claim-Safety Pass Rate,Percentage of generated drafts passing commercial policy validation,Automated claim validation logging,Manual vigilance required,100% policy compliance,100% policy compliance,Compliance Officer,Daily
+Human Approval Completion Rate,Percentage of processed leads receiving approval decision within SLA,Workflow analytics and timestamp tracking,N/A - no current SLA,>95% within 4 hours,>98% within 2 hours,SDR Team Lead,Daily
+Quarantine Rate,Percentage of leads automatically quarantined for security reasons,Security event logging and analysis,Manual identification required,<5% false positive rate,<3% false positive rate,Security Team,Weekly
+External Integration Failure Rate,Percentage of DNS/website verifications failing due to system issues,External service monitoring and error tracking,N/A - no current monitoring,<20% failure rate,<15% failure rate,Technical Operations,Daily
+Fallback Activation Rate,Percentage of leads using deterministic templates vs LLM generation,LLM provider monitoring and fallback event tracking,N/A - no current tracking,<30% fallback rate,<20% fallback rate,Technical Operations,Daily
+User Correction Rate,Percentage of generated drafts edited before approval,Draft editing analytics and user behavior tracking,N/A - no current measurement,<40% edit rate,<30% edit rate,SDR Team Lead,Weekly
+System Availability,Percentage of time system is accessible and responsive,Uptime monitoring and health check automation,N/A - development environment,>99% uptime,>99.5% uptime,Technical Operations,Continuous
+Operator Adoption Rate,Percentage of target SDRs actively using system daily,User login analytics and daily active usage tracking,0% baseline,>70% daily usage,>85% daily usage,Change Management,Weekly

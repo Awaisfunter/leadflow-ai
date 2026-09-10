@@ -1,0 +1,6 @@
+metric,value,unit,source,notes
+LLM_cost,NOT_MEASURED,-,"No paid LLM usage in evaluation environment","Deterministic templates engaged during local benchmark run; Gemini API key optional"
+DNS_lookup_cost,0.00,USD,"Cloudflare public DoH endpoint (1.1.1.1)","Public DNS-over-HTTPS queries are free and require no API key"
+Website_metadata_fetch_cost,0.00,USD,"Direct HTTP public fetch via httpx","Public GET requests to company root domains incur zero external API vendor cost"
+Database_storage_cost,0.00,USD,"Local SQLite database (logs/audit.db)","Embedded append-only SQLite storage incurs zero cloud hosting cost in local test environment"
+Infrastructure_compute_cost,0.00,USD,"Local host (127.0.0.1:8000)","Run on local development workstation during evaluation sprint"

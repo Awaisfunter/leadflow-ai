@@ -1,0 +1,31 @@
+# Environment variables and secrets
+.env
+.env.local
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Local databases and audit logs
+logs/*.db
+logs/*.sqlite3
+*.db
+*.sqlite3
+
+# Node / Frontend build artifacts (if applicable)
+node_modules/
+dist/
+build/
+.next/
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp

@@ -1,0 +1,116 @@
+{
+  "dns_tests": [
+    {
+      "domain": "cloudflare.com",
+      "label": "Known Resolvable Public Domain",
+      "status": "VERIFIED",
+      "valid_syntax": true,
+      "dns_resolves": true,
+      "ip_addresses": [
+        "104.16.132.229",
+        "104.16.133.229"
+      ],
+      "source": "public_dns",
+      "latency_ms": 304,
+      "error_code": null
+    },
+    {
+      "domain": "example.com",
+      "label": "RFC 2606 Reserved Example Domain",
+      "status": "VERIFIED",
+      "valid_syntax": true,
+      "dns_resolves": true,
+      "ip_addresses": [
+        "172.66.147.243",
+        "104.20.23.154"
+      ],
+      "source": "public_dns",
+      "latency_ms": 286,
+      "error_code": null
+    },
+    {
+      "domain": "nonexistent-test-domain-123456789.invalid",
+      "label": "Nonexistent Domain (NXDOMAIN)",
+      "status": "UNRESOLVED",
+      "valid_syntax": true,
+      "dns_resolves": false,
+      "ip_addresses": [],
+      "source": "public_dns",
+      "latency_ms": 282,
+      "error_code": "DNS_NXDOMAIN"
+    },
+    {
+      "domain": "invalid..domain..name",
+      "label": "Malformed Syntax Domain",
+      "status": "INVALID_SYNTAX",
+      "valid_syntax": false,
+      "dns_resolves": false,
+      "ip_addresses": [],
+      "source": "public_dns",
+      "latency_ms": null,
+      "error_code": "INVALID_SYNTAX"
+    }
+  ],
+  "website_tests": [
+    {
+      "target": "example.com",
+      "label": "Standard Public Website",
+      "reachable": true,
+      "status_code": 200,
+      "https": true,
+      "final_url": "https://example.com",
+      "title": "Example Domain",
+      "response_time_ms": 309,
+      "source": "public_website",
+      "error_code": null
+    },
+    {
+      "target": "cloudflare.com",
+      "label": "High-traffic HTTPS Website",
+      "reachable": true,
+      "status_code": 200,
+      "https": true,
+      "final_url": "https://www.cloudflare.com/",
+      "title": "Cloudflare: Build for the agent era",
+      "response_time_ms": 595,
+      "source": "public_website",
+      "error_code": null
+    },
+    {
+      "target": "192.0.2.1",
+      "label": "Non-routable IP (Timeout Test)",
+      "reachable": false,
+      "status_code": null,
+      "https": false,
+      "final_url": null,
+      "title": null,
+      "response_time_ms": null,
+      "source": "public_website",
+      "error_code": "TIMEOUT"
+    },
+    {
+      "target": "ftp://example.com",
+      "label": "Forbidden FTP Scheme",
+      "reachable": false,
+      "status_code": null,
+      "https": false,
+      "final_url": null,
+      "title": null,
+      "response_time_ms": null,
+      "source": "public_website",
+      "error_code": "UNSUPPORTED_SCHEME"
+    },
+    {
+      "target": "javascript:alert(1)",
+      "label": "XSS/Forbidden Scheme",
+      "reachable": false,
+      "status_code": null,
+      "https": false,
+      "final_url": null,
+      "title": null,
+      "response_time_ms": null,
+      "source": "public_website",
+      "error_code": "UNSUPPORTED_SCHEME"
+    }
+  ]
+}
