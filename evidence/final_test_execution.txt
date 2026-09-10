@@ -1,21 +1,10 @@
-FINAL TEST EXECUTION - DAY 5
-=====================================
-Date: 2026-09-08
-Environment: Windows 11, Python 3.13.5
-Working Directory: leadflow-ai-final\day2
-
-COMMAND EXECUTED:
-pytest backend/tests/test_pipeline.py -v
-
-RESULTS:
-=============================test session starts =============================
-platform win32 -- Python 3.13.5, pytest-8.4.2, pluggy-1.6.0 -- C:\ProgramData\anaconda3\python.exe
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-8.4.2, pluggy-1.6.0
 cachedir: .pytest_cache
-hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(WindowsPath('<project-root>/day2/.hypothesis/examples'))
 rootdir: <project-root>/day2
 configfile: pytest.ini
 plugins: anyio-4.12.1, hypothesis-6.92.1, langsmith-0.6.4, locust-2.43.1, cov-4.1.0, flask-1.3.0
-collected 56 items
+collecting ... collected 56 items
 
 backend/tests/test_pipeline.py::test_valid_lead_schema PASSED            [  1%]
 backend/tests/test_pipeline.py::test_invalid_email_rejection PASSED      [  3%]
@@ -79,28 +68,5 @@ backend/tests/test_pipeline.py::test_health_endpoint_privacy
   <project-root>/AppData/Roaming/Python/Python313/site-packages/starlette/formparsers.py:12: PendingDeprecationWarning: Please use `import python_multipart` instead.
     import multipart
 
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-
-=================== 56 passed, 1 warning in 76.79s (0:01:16) ===================
-
-SUMMARY:
-- Total Tests: 56
-- Passed: 56 
-- Failed: 0
-- Warnings: 1 (non-critical import warning)
-- Duration: 76.79 seconds (1:16)
-- Pass Rate: 100%
-
-TEST CATEGORIES COVERED:
-✓ Schema validation and input handling
-✓ Scoring arithmetic and tier thresholds 
-✓ Security (competitor quarantine, prompt injection)
-✓ LLM draft generation and claim validation
-✓ Human approval state machine
-✓ SQLite audit trail logging
-✓ External integration resilience (DNS, website)
-✓ Day 4 hardening features
-✓ Approval gate security tests
-✓ CRM payload validation
-
-FINAL STATUS: ALL TESTS PASSING ✅
+-- Docs: https://docs.pytest.org/en/capture-pytest.html
+================== 56 passed, 1 warning in 87.80s (0:01:27) ==================

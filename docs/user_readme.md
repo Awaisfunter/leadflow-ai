@@ -165,7 +165,7 @@ After reviewing all the information, you have three choices:
 - Lead is marked as `QUARANTINED`
 - No sales outreach will ever be sent
 - The decision is logged for security review
-- CRM dispatch remains permanently blocked
+- CRM dispatch remains blocked for quarantined leads
 
 **When to quarantine:**
 - Competitor trying to gather intelligence about your company

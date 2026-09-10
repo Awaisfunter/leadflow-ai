@@ -35,7 +35,7 @@
 #### 3b. Security Demo - Prompt Injection (45 seconds)
 1. **Click "TC-10: Prompt Injection" preset**
 2. **Process the lead**
-3. **Script**: "This lead contains 'ignore previous instructions' and tries to get a discount. Watch our security: immediate quarantine, zero score, no draft generated, dispatch permanently blocked."
+3. **Script**: "This lead contains 'ignore previous instructions' and tries to get a discount. Watch our security: immediate quarantine, zero score, no draft generated, dispatch blocked for quarantined leads."
 4. **Highlight**: Red quarantine badge, score forced to 0, no approval option available
 
 #### 3c. Failure Resilience - DNS Timeout (30 seconds)
