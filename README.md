@@ -271,10 +271,6 @@ leadflow-ai-final/
 │   ├── limitations.md         # Honest limitation assessment
 │   ├── troubleshooting.md     # Common issues and solutions
 │   └── improvement-plan.md    # Future iteration roadmap
-├── demo/                       # Demo materials
-│   ├── demo_script.md         # 5-minute demo flow
-│   ├── demo_checklist.md      # Pre-demo preparation
-│   └── demo_results.md        # Actual demo execution
 ├── case_study/                 # Portfolio-ready case study
 │   └── leadflow_case_study.md # Complete project narrative
 ├── operations/                 # Operational guides
